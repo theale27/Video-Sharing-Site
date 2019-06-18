@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YouTube_Test</title>
+    <link rel="stylesheet" href="style/style.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" />
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <button>
+          <i class="material-icons md-light">search</i>
+        </button>
+      </div>
+      <div class="menu">
+        <button>
+          <i class="material-icons md-light">menu</i>
+        </button>
+      </div>
+    </header>
+    <div id="profile_meta">
+      <h1 class="name"></h1>
+      <p id="memberSince"></p>
+      <hr />
+    </div>
+    <section id="video_upload_list">
+      <h3>Uploads</h3>
+      <div class="video_container">
+        <div class="video">
+          <a href="#" class="video_link">
+            <video preload="metadata"></video>
+          </a>
+        </div>
+
+        <div class="video_meta">
+          <h2 class="title"></h2>
+          <p class="uploadedAt"></p>
+          <p class="description"></p>
+        </div>
+      </div>
+    </section>
+    <section id="video_watched_list">
+      <h3>Recently Watched</h3>
+      <div class="video_container">
+        <div class="video">
+          <a href="#" class="video_link">
+            <video preload="metadata"></video>
+            <div class="progress_bar_bg">
+              <div class="progress_bar"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="video_meta">
+          <h2 class="title"></h2>
+          <a href="#" class="name"></a>
+          <p class="lastViewed"></p>
+          <p class="description"></p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="scripts/profile.js"></script>
+  <script src="scripts/moment.js"></script>
+</html>

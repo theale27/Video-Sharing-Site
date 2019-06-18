@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YouTube_Test</title>
+    <link rel="stylesheet" href="style/style.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" />
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <button>
+          <i class="material-icons md-light">search</i>
+        </button>
+      </div>
+      <div class="menu">
+        <button>
+          <i class="material-icons md-light">menu</i>
+        </button>
+      </div>
+    </header>
+    <section id="video_main">
+      <div id="video_container">
+        <div id="video">
+          <video controls autoplay preload="auto"></video>
+        </div>
+      </div>
+
+      <div id="video_meta">
+        <h2 id="title"></h2>
+        <p>
+          <a id="name" href="#"></a>
+          <span id="uploadedAt"> ~ uploaded on </span>
+        </p>
+        <p id="description"></p>
+        <hr />
+      </div>
+
+      <section id="video_comments">
+        <p id="comment_count"></p>
+        <div class="comment_container">
+          <a class="comment_user" href="#"></a>
+          <span class="comment_separator"> ~ </span>
+          <span class="comment_date"></span>
+          <p class="comment_body"></p>
+        </div>
+      </section>
+    </section>
+  </body>
+  <script src="scripts/video.js"></script>
+  <script src="scripts/moment.js"></script>
+</html>

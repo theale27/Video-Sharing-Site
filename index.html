@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YouTube_Test</title>
+    <link rel="stylesheet" href="style/style.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" />
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <button>
+          <i class="material-icons md-light">search</i>
+        </button>
+      </div>
+      <div class="menu">
+        <button>
+          <i class="material-icons md-light">menu</i>
+        </button>
+      </div>
+    </header>
+    <section id="video_list">
+      <h1>Latest Videos</h1>
+      <div class="video_container">
+        
+        <div class="video">
+          <a href="#" class="video_link">
+            <video preload="metadata"></video>
+          </a>
+        </div>
+
+        <div class="video_meta">
+          <h2 class="title"></h2>
+          <a href="#" class="name"></a>
+          <span class="uploadedAt"></span>
+          <p class="description"></p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="scripts/home.js"></script>
+  <script src="scripts/moment.js"></script>
+</html>
