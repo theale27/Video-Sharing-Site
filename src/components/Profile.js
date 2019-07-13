@@ -5,7 +5,7 @@ const URL =
   "https://my-json-server.typicode.com/apollo-motorhomes/youtube-test";
 
 // Gets the userId from the hash in the URL
-const userId = window.location.hash.split("=") - 1;
+const userId = window.location.hash.substr(1) - 1;
 
 class Video extends Component {
   constructor(props) {
@@ -65,7 +65,7 @@ class Video extends Component {
           videoUploadList.push(
             <div className="video_container">
               <div className="video">
-                <a href={"video=" + video[i].id} className="video_link">
+                <a href={"video#" + video[i].id} className="video_link">
                   <video preload="metadata" src={video[i].url + "#t=0.5"} />
                 </a>
               </div>
@@ -102,7 +102,7 @@ class Video extends Component {
                   recentlyWatchedList.push(
                     <div className="video_container">
                       <div className="video">
-                        <a href={"video=" + video[v].id} className="video_link">
+                        <a href={"video#" + video[v].id} className="video_link">
                           <video
                             preload="metadata"
                             src={video[v].url + "#t=0.5"}
@@ -120,7 +120,7 @@ class Video extends Component {
 
                       <div className="video_meta">
                         <h2 className="title">{video[v].title}</h2>
-                        <a href={"profile=" + user[u].id} className="name">
+                        <a href={"user#" + user[u].id} className="name">
                           {user[u].name}
                         </a>
                         <p className="lastViewed">

@@ -5,7 +5,7 @@ const URL =
   "https://my-json-server.typicode.com/apollo-motorhomes/youtube-test";
 
 // Gets the videoId from the hash in the URL
-const videoId = window.location.hash.split("=")[1] - 1;
+const videoId = window.location.hash.substr(1) - 1;
 
 class Video extends Component {
   constructor(props) {
@@ -60,7 +60,7 @@ class Video extends Component {
     let commentsList = [];
 
     //Prevents the data from being added before it's been fetched
-    if (video.length === 0) {
+    if (!this.state.video) {
       return null;
     } else {
       // Finds the uploaders username
@@ -87,7 +87,7 @@ class Video extends Component {
             if (user[u].id === comment[i].userId) {
               commentsList.push(
                 <div className="comment_container">
-                  <a className="comment_user" href={"profile=" + user[u].id}>
+                  <a className="comment_user" href={"profile#" + user[u].id}>
                     {user[u].name}
                   </a>
                   <span className="comment_date">
@@ -106,7 +106,7 @@ class Video extends Component {
       return commentsList;
     };
 
-    if (video.length === 0) {
+    if (!this.state.video) {
       return null;
     } else {
       return (
@@ -126,7 +126,7 @@ class Video extends Component {
             <div id="video_meta">
               <h2 id="title">{video[videoId].title}</h2>
               <p>
-                <a id="name" href={"profile=" + video[videoId].userId}>
+                <a id="name" href={"profile#" + video[videoId].userId}>
                   {uploaderName}
                 </a>
                 <span id="uploadedAt">
