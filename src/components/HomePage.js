@@ -52,14 +52,14 @@ class HomePage extends Component {
             videoContainer.push(
               <div key={i} className="video_container">
                 <div className="video">
-                  <a href={"video#" + video[i].id} className="video_link">
+                  <a href={"video=" + video[i].id} className="video_link">
                     <video preload="metadata" src={video[i].url + "#t=05"} />
                   </a>
                 </div>
 
                 <div className="video_meta">
                   <h2 className="title">{video[i].title}</h2>
-                  <a href={"profile#" + user[u].id} className="name">
+                  <a href={"profile=" + user[u].id} className="name">
                     {user[u].name}
                   </a>
                   <span className="uploadedAt">
